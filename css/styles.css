@@ -9,7 +9,12 @@
 
 :root{
     --lightYellow: #fff6cf;
-    --Yellow: #fece7a;
+    --darkYellow: #fece7a;
+    --yellow: #F0C808;
+    --red: #FF715B;
+    --blue: #00BFF3;
+    --darkGrey: #4C5B5C;
+    --white: #ffffff;
 }
 
 /* GLOBALS CSS */
@@ -32,11 +37,53 @@ ul li{
 
 ul li figure{
     background: rgb(255,246,207);
-    background: linear-gradient(180deg, var(--lightYellow), var(--Yellow));
+    background: linear-gradient(180deg, var(--lightYellow), var(--darkYellow));
     border-radius: 50%;
+}
+header{
+    padding-top: 1rem;
+    display:flex;
+}
+
+nav{
+    background-color: var(--blue);
+    padding: 1rem;
+    margin: 4rem 0 8rem 0;
+    width: 60%;
+    border-radius: 25px;
+}
+
+nav ul{
+    list-style-type: none;
+    overflow: hidden;
+    display:flex;
+    justify-content: space-between;
+}
+
+nav ul li{
+    margin: 0;
+}
+
+nav ul li a{
+    color: var(--white);
+    text-decoration: none;
 }
 
 /* CLASSES */
+
+.logo{
+    width: 25%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 600px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0;
+}
+
+.hamburger, .close{
+    display:none;
+}
 
 .row{
     display:flex;
@@ -58,6 +105,22 @@ ul li figure{
         max-width: 550px;
     }
 
+    header{
+        margin: 2rem;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
     .row{
         justify-content:space-evenly;
     }
@@ -71,6 +134,22 @@ ul li figure{
         max-width: 850px;
     }
     
+    header{
+        display:block;
+    }
+
+    nav{
+        width: 100%;
+        border-radius: 0;
+        margin: 1rem 0 3rem 0;
+    }
+
+    .logo{
+        width: 30%;
+        display:block;
+        margin: 0 auto;
+    }
+
     .row{
         justify-content:space-around;
     }
