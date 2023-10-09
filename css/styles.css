@@ -29,6 +29,7 @@
 
 h1,h2{
     text-align:center;
+    padding: 2rem 0;
 }
 
 ul li{
@@ -71,6 +72,8 @@ nav ul li a{
 
 /* CLASSES */
 
+/** HEADER **/
+
 .logo{
     width: 25%;
     height: 100%;
@@ -84,6 +87,81 @@ nav ul li a{
 .hamburger, .close{
     display:none;
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/** CATALOG / GRID **/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    grid-gap: 10px; 
+}
+
+.grid figure {
+    width: 100%;
+}
+
+.grid figure img {
+    width: 100%;
+    height: auto;
+}
+
+.grid div {
+    width: 100%;
+}
+
+.grid div img {
+    width: 100%;
+    height: auto;
+}
+
+.grid .mainimg {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid .secondimg {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid figure:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid figure:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid .products {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid figure:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid figure:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/** MEET THE ROBOTS / FLEX **/
 
 .row{
     display:flex;
@@ -107,10 +185,23 @@ nav ul li a{
 
     header{
         margin: 2rem;
+        justify-content: space-between;
+    }
+
+    header a{
+        width: 10%;
+        margin: 0;
+    }
+
+    header a img{
+        width: 100%;
+        height: 100%;
+        float:right;
     }
 
     .logo{
         width: 40%;
+        margin: 0;
     }
 
     nav{
@@ -118,9 +209,13 @@ nav ul li a{
     }
 
     .hamburger{
-        display:block;
+        display: block;
     }
 
+    .grid{
+        grid-template-columns: 550px; 
+    }
+    
     .row{
         justify-content:space-evenly;
     }
